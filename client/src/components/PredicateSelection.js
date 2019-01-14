@@ -19,8 +19,9 @@ class PredicateSelection extends React.Component {
         <select
           onChange={this.handleChange && this.sendData}
           >
+          <option value="null">Select One</option>
           <option value="email" data-type="string">User Email</option>
-          <option value="screenWdata-typeth" data-type="integer">Screen Width</option>
+          <option value="screenWidth" data-type="integer">Screen Width</option>
           <option value="screenHeight" data-type="integer">Screen Height</option>
           <option value="numOfVisits" data-type="integer"># of Visits</option>
           <option value="firstName" data-type="string">First Name</option>
