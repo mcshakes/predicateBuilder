@@ -1,30 +1,23 @@
 import React from "react";
 
 class PredicateSelection extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      selectedPredicate: "",
-      dataType: ""
-    }
-  }
 
   handleChange = (e) => {
-    // console.log(e.target.selectedOptions[0].getAttribute("data-type"))
     let dataType = e.target.selectedOptions[0].getAttribute("data-type");
+  }
 
-    this.setState({
-      selectedPredicate: e.target.value,
-      dataType 
-    })
+  sendData = (event) => {
+    let value = event.target.value;
+    let dataType = event.target.selectedOptions[0].getAttribute("data-type");
+
+    this.props.buildColumn([value, dataType])
   }
 
   render() {
     return (
       <form>
         <select
-          value={this.state.selectedPredicate}
-          onChange={this.handleChange}
+          onChange={this.handleChange && this.sendData}
           >
           <option value="email" data-type="string">User Email</option>
           <option value="screenWdata-typeth" data-type="integer">Screen Width</option>

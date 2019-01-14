@@ -10,10 +10,16 @@ class SessionTable extends React.Component {
     }
   }
 
+  onColumnChange = (predicate) => {
+    this.setState({
+      predicateBuilder: predicate
+    })
+  }
+
   render() {
     return (
       <div>
-        <PredicateSelection />
+        <PredicateSelection buildColumn={this.onColumnChange}/>
       </div>
     )
   }
