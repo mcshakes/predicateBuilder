@@ -8,24 +8,34 @@ class SessionTable extends React.Component {
     super(props)
     this.state = {
       filters: [],
-      predicateBuilder: ""
+      predicateBuilder: [],
+      type: "",
+      operator: "",
+      searchValue: ""
     }
   }
 
   onColumnChange = (predicate) => {
     this.setState({
-      predicateBuilder: predicate
+      predicateBuilder: [...this.state.predicateBuilder, predicate[0]],
+      type: predicate[1]
     })
   }
 
   onOperatorChange = (operator) => {
-    console.log(operator)
+    this.setState({
+      predicateBuilder: [...this.state.predicateBuilder, operator]
+    })
+  }
+
+  handleChange(event) {
+    this.setState({searchValue: event.target.value})
   }
 
   render() {
     const isEmpty = this.state.predicateBuilder === "";
-    const isIntegerType = this.state.predicateBuilder[1] === "integer"
-    const isStringType = this.state.predicateBuilder[1] === "string"
+    const isIntegerType = this.state.type === "integer"
+    const isStringType = this.state.type === "string"
 
     let renderOperaterSelect;
 
@@ -40,6 +50,9 @@ class SessionTable extends React.Component {
       <div>
         <PredicateSelection buildColumn={this.onColumnChange}/>
         {renderOperaterSelect}
+        {/* <form>
+          <input type="text" value={this.state.searchValue} onChange={this.handleChange}/>
+        </form> */}
       </div>
     )
   }

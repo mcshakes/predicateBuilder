@@ -2,9 +2,21 @@ import React from "react";
 
 class IntegerOperators extends React.Component {
 
-  buildOperator = (event) => {
+  state = {
+    isSubmitted: false,
+    value: ""
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      value: event.target.value
+    })
+  }
+
+  sendOperator = (event) => {
     let operator = event.target.value
     this.props.buildOperator(operator)
+    event.preventDefault()
   }
 
   render() {
@@ -12,7 +24,7 @@ class IntegerOperators extends React.Component {
       <div>
         <form>
           <select
-            onChange={this.sendOperator}
+            onChange={this.handleChange && this.sendOperator}
             >
             <option>Select One</option>
             <option value="equals">equals</option>
