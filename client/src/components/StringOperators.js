@@ -2,6 +2,16 @@ import React from "react";
 
 class StringOperators extends React.Component {
 
+  state = {
+    value: ""
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      value: event.target.value
+    })
+  }
+
   sendOperator = (event) => {
     let operator = event.target.value
     this.props.buildOperator(operator)

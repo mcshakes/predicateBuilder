@@ -13,6 +13,8 @@ class PredicateSelection extends React.Component {
     this.props.buildColumn([value, dataType])
   }
 
+
+
   render() {
     return (
       <form>

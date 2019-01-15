@@ -3,7 +3,6 @@ import React from "react";
 class IntegerOperators extends React.Component {
 
   state = {
-    isSubmitted: false,
     value: ""
   }
 
