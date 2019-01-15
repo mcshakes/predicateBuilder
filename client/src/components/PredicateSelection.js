@@ -20,15 +20,16 @@ class PredicateSelection extends React.Component {
           onChange={this.handleChange && this.sendData}
           >
           <option value="null">Select One</option>
-          <option value="email" data-type="string">User Email</option>
-          <option value="screenWidth" data-type="integer">Screen Width</option>
-          <option value="screenHeight" data-type="integer">Screen Height</option>
-          <option value="numOfVisits" data-type="integer"># of Visits</option>
-          <option value="firstName" data-type="string">First Name</option>
-          <option value="lastName" data-type="string">Last Name</option>
-          <option value="responseTime" data-type="integer">Page Response Time (ms)</option>
+          <option value="id" data-type="integer">ID</option>
+          <option value="user_email" data-type="string">User Email</option>
+          <option value="screen_width" data-type="integer">Screen Width</option>
+          <option value="screen_height" data-type="integer">Screen Height</option>
+          <option value="visits" data-type="integer"># of Visits</option>
+          <option value="user_first_name" data-type="string">First Name</option>
+          <option value="user_last_name" data-type="string">Last Name</option>
+          <option value="page_response" data-type="integer">Page Response Time (ms)</option>
           <option value="domain" data-type="string">Domain</option>
-          <option value="pagePath" data-type="string">Page Path</option>
+          <option value="path" data-type="string">Page Path</option>
         </select>
       </form>
     )

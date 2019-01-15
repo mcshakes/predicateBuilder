@@ -18,6 +18,10 @@ class SessionTable extends React.Component {
     })
   }
 
+  onOperatorChange = (operator) => {
+    console.log(operator)
+  }
+
   render() {
     const isEmpty = this.state.predicateBuilder === "";
     const isIntegerType = this.state.predicateBuilder[1] === "integer"
@@ -26,10 +30,10 @@ class SessionTable extends React.Component {
     let renderOperaterSelect;
 
     if (!isEmpty && isIntegerType) {
-      renderOperaterSelect = <IntegerOperators />
+      renderOperaterSelect = <IntegerOperators buildOperator={this.onOperatorChange}/>
     }
     if (!isEmpty && isStringType) {
-      renderOperaterSelect = <StringOperators />
+      renderOperaterSelect = <StringOperators buildOperator={this.onOperatorChange}/>
     }
 
     return (
