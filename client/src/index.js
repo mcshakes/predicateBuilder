@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import SessionTable from './components/SessionTable';
+import Builder from './components/Builder';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <SessionTable />,
+  <Builder />,
 document.getElementById('root')
 );
 

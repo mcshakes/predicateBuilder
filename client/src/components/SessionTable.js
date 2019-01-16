@@ -3,6 +3,7 @@ import PredicateSelection from "./PredicateSelection";
 import IntegerOperators from "./IntegerOperators";
 import StringOperators from "./StringOperators";
 import SearchValue from "./SearchValue";
+import "../css/Session.css";
 
 class SessionTable extends React.Component {
   constructor(props) {
@@ -11,8 +12,7 @@ class SessionTable extends React.Component {
       filters: [],
       predicateBuilder: [],
       type: "",
-      operator: "",
-      searchValue: ""
+      operator: ""
     }
   }
 
@@ -30,12 +30,14 @@ class SessionTable extends React.Component {
   }
 
   submitSearchValue = (value) => {
-
     this.setState({
-      searchValue: [...this.state.predicateBuilder, value]
+      predicateBuilder: [...this.state.predicateBuilder, value]
     })
   }
 
+  sendQueryUp = (value) => {
+    this.props.sendUp([...this.state.predicateBuilder, value])
+  }
 
 
   render() {
@@ -54,11 +56,11 @@ class SessionTable extends React.Component {
     }
 
     if (!isEmpty) {
-      showUserInput = <SearchValue searchValue={this.submitSearchValue}/>
+      showUserInput = <SearchValue searchValue={this.submitSearchValue} fromTheBottom={this.sendQueryUp}/>
     }
 
     return (
-      <div>
+      <div className="predicate-start">
         <PredicateSelection buildColumn={this.onColumnChange}/>
         {renderOperaterSelect}
         {showUserInput}

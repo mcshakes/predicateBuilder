@@ -13,7 +13,12 @@ class SearchValue extends React.Component {
 
   handleSubmit = (event) => {
     this.props.searchValue(this.state.value)
+    this.props.fromTheBottom(this.state.value)
     event.preventDefault();
+  }
+
+  thisThing = () => {
+    this.props.fromTheBottom(this.state.value)
   }
 
   render() {
