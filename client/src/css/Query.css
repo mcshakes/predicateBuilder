@@ -1,0 +1,23 @@
+#select {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#from {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#table {
+  margin-right: 20px;
+}
+
+#where {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#predicate {
+  font-weight: italic;
+  margin-right: 20px;
+}

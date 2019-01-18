@@ -5,7 +5,7 @@ import EqualQuery from "./EqualQuery";
 
 class Builder extends React.Component {
   state = {
-    query: ""
+    query: []
   }
 
   getBack = (query) => {
@@ -17,7 +17,6 @@ class Builder extends React.Component {
   renderMatch = (state) => {
 
     let operator = state.query[1]
-    // console.log("operator", state.query[1])
 
     switch (operator) {
       case "equals":
