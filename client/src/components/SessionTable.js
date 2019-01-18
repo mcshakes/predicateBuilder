@@ -36,7 +36,7 @@ class SessionTable extends React.Component {
   }
 
   sendQueryUp = (value) => {
-    this.props.sendUp([...this.state.predicateBuilder, value])
+    this.props.sendUp(this.props.id, [...this.state.predicateBuilder, value])
   }
 
 

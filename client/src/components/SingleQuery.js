@@ -2,9 +2,10 @@ import React from "react";
 import "../css/Query.css";
 
 
-class EqualQuery extends React.Component {
+class SingleQuery extends React.Component {
 
   render() {
+    console.log(this.props.predicateInfo)
     return (
       <div>
         <div>
@@ -19,4 +20,4 @@ class EqualQuery extends React.Component {
   }
 }
 
-export default EqualQuery;
+export default SingleQuery;
