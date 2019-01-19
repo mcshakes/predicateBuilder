@@ -5,7 +5,8 @@ import "../css/Query.css";
 class SingleQuery extends React.Component {
 
   render() {
-    console.log(this.props.predicateInfo)
+    console.log("BOTTOM COMPONENT", this.props.predicateInfo[0])
+    const queryValues = this.props.predicateInfo[0]
     return (
       <div>
         <div>
@@ -13,7 +14,7 @@ class SingleQuery extends React.Component {
           <span id="from">FROM</span>
           <span id="table">session</span>
           <span id="where">WHERE</span>
-          <span id="predicate">{this.props.predicateInfo[0]}={this.props.predicateInfo[2]}</span>
+          <span id="predicate">{queryValues[0]} = {queryValues[2]}</span>
         </div>
       </div>
     )

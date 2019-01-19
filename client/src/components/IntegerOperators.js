@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/PredicateSelection.css";
 
 class IntegerOperators extends React.Component {
 
@@ -24,6 +25,7 @@ class IntegerOperators extends React.Component {
         <form>
           <select
             onChange={this.handleChange && this.sendOperator}
+            className="select-int-operators"
             >
             <option>Select One</option>
             <option value="equals">equals</option>

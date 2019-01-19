@@ -1,4 +1,6 @@
 import React from "react";
+import "../css/PredicateSelection.css";
+
 
 class PredicateSelection extends React.Component {
 
@@ -20,6 +22,7 @@ class PredicateSelection extends React.Component {
       <form>
         <select
           onChange={this.handleChange && this.sendData}
+          className="select-column"
           >
           <option value="null">Select One</option>
           <option value="id" data-type="integer">ID</option>

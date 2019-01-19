@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Search.css";
 
 class SearchValue extends React.Component {
 
@@ -23,7 +24,9 @@ class SearchValue extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}
+        className="search-form"
+        >
         <input type="text" value={this.state.value} onChange={this.handleChange}/>
         <input type="submit" value="Search"/>
       </form>

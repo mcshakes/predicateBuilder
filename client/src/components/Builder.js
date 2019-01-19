@@ -2,6 +2,7 @@ import React from "react";
 import SessionTable from './SessionTable';
 import QueryString from "./QueryString";
 import SingleQuery from "./SingleQuery";
+import "../css/Builder.css";
 
 class Builder extends React.Component {
   state = {
@@ -18,7 +19,7 @@ class Builder extends React.Component {
   }
 
   renderMatch = (state) => {
-    console.log(state.query)
+    // console.log(state.query)
     let operator = state.query
 
     if (state.query.length === 1) {
@@ -42,8 +43,16 @@ class Builder extends React.Component {
           {tables}
         </div>
 
+
+        <div className="add-line">
+            <button
+              onClick={() => this.setState({numTable: this.state.numTable + 1})}>
+              ADD
+            </button>
+        </div>
+
         {this.renderMatch(this.state)}
-        <button onClick={() => this.setState({numTable: this.state.numTable + 1})} >ADD</button>
+
       </div>
     )
   }

@@ -1,0 +1,32 @@
+.select-column {
+  cursor: pointer;
+  height: 35px;
+  overflow: hidden;
+  width: 80%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.select-int-operators {
+  cursor: pointer;
+  height: 35px;
+  overflow: hidden;
+  width: 80%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.select-str-operators {
+  cursor: pointer;
+  height: 35px;
+  overflow: hidden;
+  width: 80%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: large;
+}

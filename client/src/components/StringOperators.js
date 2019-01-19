@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/PredicateSelection.css";
 
 class StringOperators extends React.Component {
 
@@ -24,6 +25,7 @@ class StringOperators extends React.Component {
           >
           <select
             onChange={this.sendOperator}
+            className="select-str-operators"
             >
             <option>Select One</option>
             <option value="equals">equals</option>
