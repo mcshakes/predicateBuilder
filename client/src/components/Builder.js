@@ -2,7 +2,6 @@ import React from "react";
 import SessionTable from './SessionTable';
 import QueryString from "./QueryString";
 import SingleQuery from "./SingleQuery";
-import AdditionalQueryLine from "./AdditionalQueryLine";
 import "../css/Builder.css";
 
 class Builder extends React.Component {
@@ -21,13 +20,6 @@ class Builder extends React.Component {
 
 
   renderQueries = () => {
-    // if (this.state.query.length === 1) {
-    //   return <SingleQuery queryInfo={this.state.query}/>
-    // }
-    //
-    // if (this.state.query.length > 1) {
-    //   return <SingleQuery queryInfo={this.state.query}/>
-    // }
     return (<div>
       {
         this.state.query.map((query, index) => {
