@@ -12,7 +12,26 @@ class SingleQuery extends React.Component {
     }
   }
 
-
+  queryOperators = (param) => {
+    switch(param) {
+      case "equals":
+        return "=";
+      case "contains":
+        return "Contains"
+      case "between":
+        return "BETWEEN"
+      case "starts with":
+        return "LIKE"
+      case "greater than":
+        return ">=";
+      case "less than":
+        return "<=";
+      case "in list":
+        return "IN";
+      default:
+        return "";
+    }
+  }
 
   render() {
 
@@ -24,6 +43,7 @@ class SingleQuery extends React.Component {
 
 
     const queryValues = this.props.queryValues
+
     return (
       <div>
         <div>
@@ -33,7 +53,7 @@ class SingleQuery extends React.Component {
 
 
 
-          <span id="predicate">{queryValues[0]} = {queryValues[2]}</span>
+          <span id="predicate">{queryValues[0]} {this.queryOperators(queryValues[1])} {queryValues[2]}</span>
         </div>
 
       </div>
