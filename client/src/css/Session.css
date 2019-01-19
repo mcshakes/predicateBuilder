@@ -1,5 +1,8 @@
 .predicate-start {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 2px red solid;
+  border: 2px grey solid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }

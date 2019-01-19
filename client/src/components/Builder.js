@@ -2,6 +2,7 @@ import React from "react";
 import SessionTable from './SessionTable';
 import QueryString from "./QueryString";
 import SingleQuery from "./SingleQuery";
+import AdditionalQueryLine from "./AdditionalQueryLine";
 import "../css/Builder.css";
 
 class Builder extends React.Component {
@@ -18,17 +19,23 @@ class Builder extends React.Component {
     })
   }
 
-  renderMatch = (state) => {
-    // console.log(state.query)
-    let operator = state.query
 
-    if (state.query.length === 1) {
-      return <SingleQuery predicateInfo={state.query}/>
-    }
-  //   0: (3) ["user_email", "contains", "asdasd"]
-  // 1: (3) ["user_last_name", "starts with", "butt"]
+  renderQueries = () => {
+    // if (this.state.query.length === 1) {
+    //   return <SingleQuery queryInfo={this.state.query}/>
+    // }
+    //
+    // if (this.state.query.length > 1) {
+    //   return <SingleQuery queryInfo={this.state.query}/>
+    // }
+    return (<div>
+      {
+        this.state.query.map((query, index) => {
+          return <SingleQuery key={index} index={index} queryValues={query}/>
+        })
+      }
+    </div>)
   }
-
 
   render() {
     let tables = [];
@@ -36,6 +43,7 @@ class Builder extends React.Component {
     for (let i=0; i < this.state.numTable; i++) {
       tables.push(<SessionTable key={i} sendUp={this.getBack} id={i}/>)
     }
+
 
     return (
       <div>
@@ -51,7 +59,7 @@ class Builder extends React.Component {
             </button>
         </div>
 
-        {this.renderMatch(this.state)}
+        {this.renderQueries()}
 
       </div>
     )
