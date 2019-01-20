@@ -10,11 +10,15 @@ class StringOperators extends React.Component {
   handleChange = (event) => {
     this.setState({
       value: event.target.value
+    }, () => {
+      this.sendOperator(this.state.value);
     })
   }
 
-  sendOperator = (event) => {
-    let operator = event.target.value
+
+  sendOperator = (operator) => {
+
+    console.log("SENDING OpERATOR", operator)
     this.props.buildOperator(operator)
   }
 
@@ -23,8 +27,11 @@ class StringOperators extends React.Component {
       <div className="operator-form">
         <form>
           <select
-            onChange={this.sendOperator}
+            onChange={
+              this.handleChange
+            }
             className="select-str-operators"
+            value={this.state.value}
             >
             <option>Select One</option>
             <option value="equals">equals</option>
