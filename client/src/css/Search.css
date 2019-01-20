@@ -1,8 +1,28 @@
 .search-form {
   cursor: pointer;
-  height: 80%;
   overflow: hidden;
-  width: 60%;
   border-radius: 5px;
   font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 60%;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.search-form input[type="submit"] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 60%;
+  padding: 7px;
+  font-size: 16px;
 }

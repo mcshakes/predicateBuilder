@@ -1,8 +1,13 @@
+.column-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .select-column {
   cursor: pointer;
   height: 35px;
   overflow: hidden;
-  width: 80%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -10,10 +15,11 @@
 }
 
 .select-int-operators {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   height: 35px;
   overflow: hidden;
-  width: 80%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -21,12 +27,19 @@
 }
 
 .select-str-operators {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   height: 35px;
   overflow: hidden;
-  width: 80%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   font-size: large;
+}
+
+.operator-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

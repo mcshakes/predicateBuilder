@@ -20,9 +20,8 @@ class StringOperators extends React.Component {
 
   render() {
     return (
-      <div>
-        <form
-          >
+      <div className="operator-form">
+        <form>
           <select
             onChange={this.sendOperator}
             className="select-str-operators"

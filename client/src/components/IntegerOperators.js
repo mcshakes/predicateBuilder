@@ -21,7 +21,7 @@ class IntegerOperators extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="operator-form">
         <form>
           <select
             onChange={this.handleChange && this.sendOperator}
