@@ -17,8 +17,6 @@ class StringOperators extends React.Component {
 
 
   sendOperator = (operator) => {
-
-    console.log("SENDING OpERATOR", operator)
     this.props.buildOperator(operator)
   }
 

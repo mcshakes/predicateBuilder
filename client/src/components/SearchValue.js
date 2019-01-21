@@ -18,10 +18,6 @@ class SearchValue extends React.Component {
     event.preventDefault();
   }
 
-  thisThing = () => {
-    this.props.fromTheBottom(this.state.value)
-  }
-
   render() {
     return (
       <form onSubmit={this.handleSubmit}

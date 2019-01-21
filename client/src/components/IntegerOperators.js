@@ -10,13 +10,14 @@ class IntegerOperators extends React.Component {
   handleChange = (event) => {
     this.setState({
       value: event.target.value
+    }, () => {
+      this.sendOperator(this.state.value)
     })
   }
 
-  sendOperator = (event) => {
-    let operator = event.target.value
+  sendOperator = (operator) => {
+
     this.props.buildOperator(operator)
-    event.preventDefault()
   }
 
   render() {
@@ -24,7 +25,7 @@ class IntegerOperators extends React.Component {
       <div className="operator-form">
         <form>
           <select
-            onChange={this.handleChange && this.sendOperator}
+            onChange={this.handleChange}
             className="select-int-operators"
             >
             <option>Select One</option>

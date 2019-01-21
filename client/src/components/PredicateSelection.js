@@ -11,11 +11,8 @@ class PredicateSelection extends React.Component {
   sendData = (event) => {
     let value = event.target.value;
     let dataType = event.target.selectedOptions[0].getAttribute("data-type");
-
     this.props.buildColumn([value, dataType])
   }
-
-
 
   render() {
     return (

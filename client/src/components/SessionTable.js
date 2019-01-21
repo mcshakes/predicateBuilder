@@ -44,6 +44,7 @@ class SessionTable extends React.Component {
     const isEmpty = this.state.predicateBuilder.length === 0;
     const isIntegerType = this.state.type === "integer"
     const isStringType = this.state.type === "string"
+    const isBetween = this.state.predicateBuilder[1];
 
     let renderOperaterSelect;
     let showUserInput;
