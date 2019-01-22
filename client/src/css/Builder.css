@@ -1,3 +1,8 @@
+.query-builder {
+  margin-right: 20px;
+  margin-left: 20px
+}
+
 .add-line button {
   color: #0099CC;
   background: transparent;
@@ -19,4 +24,10 @@
 .add-line button:hover {
   background-color: #008CBA;
   color: white;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px
 }

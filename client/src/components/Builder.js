@@ -16,7 +16,7 @@ class Builder extends React.Component {
 
     // this.cutdown(query)
     let currentQuery = this.state.query;
-    
+
     currentQuery[id] = query;
     this.setState({
       query: currentQuery
@@ -50,7 +50,7 @@ class Builder extends React.Component {
 
 
     return (
-      <div>
+      <div class="query-builder">
         <div className="builder-base">
           {tables}
         </div>
@@ -63,7 +63,9 @@ class Builder extends React.Component {
             </button>
         </div>
 
-        {this.renderQueries()}
+        <div className="result">
+          {this.renderQueries()}
+        </div>
 
       </div>
     )
