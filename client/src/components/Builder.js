@@ -45,7 +45,7 @@ class Builder extends React.Component {
 
 
     return (
-      <div class="query-builder">
+      <div className="query-builder">
         <div className="builder-base">
           {tables}
         </div>
