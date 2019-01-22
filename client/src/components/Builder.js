@@ -11,12 +11,7 @@ class Builder extends React.Component {
   }
 
   getBack = (id, query) => {
-    // console.log("ID", id)
-    // console.log("QUERY", query)
-
-    // this.cutdown(query)
     let currentQuery = this.state.query;
-
     currentQuery[id] = query;
     this.setState({
       query: currentQuery

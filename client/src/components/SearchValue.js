@@ -2,7 +2,6 @@ import React from "react";
 import "../css/Search.css";
 
 class SearchValue extends React.Component {
-
     state = {
       value: ""
     }

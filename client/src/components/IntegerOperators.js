@@ -16,7 +16,6 @@ class IntegerOperators extends React.Component {
   }
 
   sendOperator = (operator) => {
-
     this.props.buildOperator(operator)
   }
 

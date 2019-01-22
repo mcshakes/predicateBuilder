@@ -12,7 +12,6 @@ class RenderQuery extends React.Component {
   }
 
   renderSQLQuery = (state) => {
-    console.log("BOTTOM COMPONENT", state)
     const queryValues = this.state.queryValues
 
     const renderLineQuery = (
