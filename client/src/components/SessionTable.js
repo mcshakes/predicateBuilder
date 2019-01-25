@@ -3,6 +3,7 @@ import PredicateSelection from "./PredicateSelection";
 import IntegerOperators from "./IntegerOperators";
 import StringOperators from "./StringOperators";
 import SearchValue from "./SearchValue";
+import TwoSearchValues from "./TwoSearchValues";
 import "../css/Session.css";
 
 class SessionTable extends React.Component {
@@ -56,7 +57,11 @@ class SessionTable extends React.Component {
       renderOperaterSelect = <StringOperators buildOperator={this.onOperatorChange}/>
     }
 
-    if (!isEmpty) {
+    if (!isEmpty && isBetween === "between") {
+      showUserInput = <TwoSearchValues searchValue={this.submitSearchValue} fromTheBottom={this.sendQueryUp}/>
+    }
+
+    if (!isEmpty && isBetween !== "between" ) {
       showUserInput = <SearchValue searchValue={this.submitSearchValue} fromTheBottom={this.sendQueryUp}/>
     }
 
