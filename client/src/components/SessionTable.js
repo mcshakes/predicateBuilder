@@ -58,7 +58,7 @@ class SessionTable extends React.Component {
     }
 
     if (!isEmpty && isBetween === "between") {
-      showUserInput = <TwoSearchValues searchValue={this.submitSearchValue} fromTheBottom={this.sendQueryUp}/>
+      showUserInput = <TwoSearchValues searchValue={this.submitSearchValue} accessSearchQueries={this.sendQueryUp}/>
     }
 
     if (!isEmpty && isBetween !== "between" ) {
