@@ -1,6 +1,6 @@
 .predicate-start {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr .50fr 1fr;
   text-align: center;
   background-color: #F6F7F8;
   border-radius: 6px;
