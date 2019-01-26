@@ -47,9 +47,15 @@ class SingleQuery extends React.Component {
 
     if (Array.isArray(operator)) {
       queryReturned = <span id="predicate">{queryValues[0]}  <span id="like">{operator[0]}</span>  '{queryValues[2]}{operator[1]}'</span>
-    } else if (operator === "IN") {
+    }
+    else if (operator === "IN") {
       queryReturned = <span id="predicate">{queryValues[0]} <span id="in">{operator}</span> ({queryValues[2]})</span>
-    } else {
+    }
+    else if (operator === "BETWEEN") {
+      console.log(queryValues)
+      queryReturned = <span id="predicate">{queryValues[0]} <span id="between">{operator}</span> {queryValues[2][0]} <span id="and">AND</span>{queryValues[2][1]}</span>
+    }
+    else {
       queryReturned = <span id="predicate">{queryValues[0]} {operator} {queryValues[2]}</span>
     }
 
